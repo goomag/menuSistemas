@@ -32,4 +32,6 @@ class ParametroAdmin(admin.ModelAdmin):
     search_fields = ['chave']
 
 
+
+
 admin.site.register(Parametro, ParametroAdmin)

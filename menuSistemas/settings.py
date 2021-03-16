@@ -32,8 +32,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
+    'jet',
     'django.contrib.contenttypes',
-    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sessions',
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db_menu_sistemas',
         'USER': 'postgres',
-        'PASSWORD': 'root',
+        'PASSWORD': 'hud50n',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -125,9 +126,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
@@ -140,11 +141,11 @@ MEDIA_ROOT = (
   os.path.join(BASE_DIR, 'media') #pasta media para abrigar os arquivos dos usuários
 )
 
-#X_FRAME_OPTIONS = 'SAMEORIGIN'
-#COnfiguranções o GRAPPELLI ADMIN
-GRAPPELLI_ADMIN_TITLE = "Sistemas PRODATER"
-GRAPPELLI_AUTOCOMPLETE_LIMIT = 5
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+#COnfiguranções o JET ADMIN
+JET_DEFAULT_THEME = 'light-gray'
+JET_SIDE_MENU_COMPACT = True
 
-
-
+#JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
+#JET_APP_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultAppIndexDashboard'
