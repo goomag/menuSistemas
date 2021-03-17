@@ -3,9 +3,33 @@
 {% block content %}
 		<div class="row">
 			<div class="col-lg-10 col-md-10 col-sm-8 ">
-				<div class="card shadow mb-4 border-left-info">
-					<div class="card-header py-3">
-						<h6 class="m-0 font-weight-bold text-dark">{{ title_sistemas }}</h6>
+				<div class="card shadow mb-4 border-left-warning">
+					<div class="card-header py-1  ">
+						<div class="row no-gutters">
+							<div class="col-6 align-middle my-auto">
+								<h5 class="m-0 font-weight-bold text-dark align-middle">{{ title_sistemas }}</h5>
+							</div>
+							<div class="col-6 align-middle form-group row my-auto">
+								<div class="col-4">
+									<input class="form-control" size="20" placeholder="Título"/>
+								</div>
+								<div class="col-4">
+									<select class="form-control">
+										<option selected>Stakeholder</option>
+									</select>
+								</div>
+								<div class="col-3">
+									<select class="form-control">
+										<option selected>Estágio</option>
+									</select>
+								</div>
+								<div class="col-1">
+									<button class="btn btn-sm btn-outline-primary"><i class="fas fa-search"></i> </button>
+								</div>
+							</div>
+						</div>
+
+
 					</div>
 					<div class="card-body">
 						<div class="row mb-4">
@@ -18,7 +42,7 @@
                                         <div class="col-12 mr-2">
 
 											<div class="row">
-												<div class="mb-0 font-weight-bold text-primary text-sm col-6">{{sistema.titulo}}</div>
+												<div class="mb-0 font-weight-bold text-warning text-sm col-6">{{sistema.titulo}}</div>
 												<div class="col-6 text-right">
 													<i class="fas fa-award text-gray-700 text-xs" ></i>
 													<span class="badge text-gray-700 text-xs">{{sistema.stakeholder}}</span>
@@ -33,7 +57,7 @@
 											</div>
                                         </div>
                                         <div class="col-12text-xs mx-auto font-weight-bold  mt-2">
-												<a class="btn btn-sm btn-outline-success" href="{{sistema.endereco}}" >Acessar Sistema</a>
+												<a class="btn btn-sm btn-outline-dark" href="{{sistema.endereco}}" >Acessar Sistema</a>
 										</div>
                                     </div>
                                 </div>

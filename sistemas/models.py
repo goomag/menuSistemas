@@ -11,11 +11,12 @@ from django.contrib.auth.models import User
 
 class Stakeholder(models.Model):
     id = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=200)
+    nome = models.CharField(max_length=200, null=False)
+    sigla = models.CharField(max_length=10, null=False)
     cadastro = models.DateTimeField(blank=False, null=False, default=datetime.now, editable=False)
 
     def __str__(self):
-        return self.nome
+        return self.sigla
 
     class Meta:
         managed = False

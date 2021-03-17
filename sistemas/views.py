@@ -9,4 +9,4 @@ def home(request):
 
     listaSistema = Sistema.objects.all()
 
-    return render(request,'home.html',{ 'title_sistemas' : 'Carta de Sistemas', 'copyright' :  copyright.valor, 'sistemas' : listaSistema})
+    return render(request,'home.html',{ 'title_sistemas' : 'Portifólio de Sistemas', 'copyright' :  copyright.valor, 'sistemas' : listaSistema})

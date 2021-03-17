@@ -21,7 +21,7 @@ admin.site.register(Responsavel,ResponsavelAdmin)
 
 
 class StakeholderAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'cadastro')
+    list_display = ('id', 'nome', 'sigla', 'cadastro')
     search_fields = ['nome']
 
 
