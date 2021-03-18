@@ -6,26 +6,34 @@
 				<div class="card shadow mb-4 border-left-warning">
 					<div class="card-header py-1  ">
 						<div class="row no-gutters">
-							<div class="col-6 align-middle my-auto">
+							<div class="col-5 align-middle my-auto">
 								<h5 class="m-0 font-weight-bold text-dark align-middle">{{ title_sistemas }}</h5>
 							</div>
-							<div class="col-6 align-middle form-group row my-auto">
+							<div class="col-6 align-middle form-group row my-auto" >
 								<div class="col-4">
-									<input class="form-control" size="20" placeholder="Título"/>
+									<input class="form-control" style="font-size:small;" size="20" placeholder="Título"/>
 								</div>
 								<div class="col-4">
-									<select class="form-control">
-										<option selected>Stakeholder</option>
+									<select class="form-control" style="font-size:small;">
+										<option selected>Órgão</option>
+										{% for stakeholder in stakeholders %}
+										<option value="{{stakeholder.id}}">{{stakeholder.sigla}}</option>
+										{% endfor %}
 									</select>
 								</div>
-								<div class="col-3">
-									<select class="form-control">
+								<div class="col-4">
+									<select class="form-control" style="font-size:small;">
 										<option selected>Estágio</option>
+										<option value="Em Definição">Em Definição</option>
+										<option value="Em Desenvolvimento">Em Desenvolvimento</option>
+										<option value="Em Operação">Em Operação</option>
+										<option value="Descontinuado">Descontinuado</option>
 									</select>
 								</div>
-								<div class="col-1">
-									<button class="btn btn-sm btn-outline-primary"><i class="fas fa-search"></i> </button>
-								</div>
+
+							</div>
+							<div class="col-1">
+									<button class="btn btn-sm btn-outline-primary m-1"><i class="fas fa-search"></i> </button>
 							</div>
 						</div>
 
