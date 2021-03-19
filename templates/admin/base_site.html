@@ -6,16 +6,16 @@
 {% block extrahead %}<link rel="shortcut icon" type="image/png" href="{{MEDIA_URL}}your_logo.png"/>{% endblock %}
 
 {# Setup browser tab label #}
-{% block title %}{{ title }} |  {% trans "Your title" %}{% endblock %}
+{% block title %}Carta de Sistemas |  {% trans "Your title" %}{% endblock %}
 
 {# Setup branding #}
 {% block branding %}
     <h1 id="site-name">
         <a href="{% url 'admin:index' %}">
             {# Your logo here #}
-            <img style="background-color: red" src="{{MEDIA_URL}}your_logo.png" alt="Carta de Sistemas" height="50%" width="50%">
+            <img style="background-color: transparent" src="{{MEDIA_URL}}carta-sistemas.png" alt="Carta de Sistemas" width="100%">
             <br><br>
-            </span> {% trans "Your Branding" %}
+            </span>
         </a>
     </h1>
 {% endblock %}

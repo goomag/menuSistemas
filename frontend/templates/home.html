@@ -50,7 +50,7 @@
                                         <div class="col-12 mr-2">
 
 											<div class="row">
-												<div class="mb-0 font-weight-bold text-warning text-sm col-6">{{sistema.titulo}}</div>
+												<div class="mb-0 font-weight-bold text-secundary text-sm col-6">{{sistema.titulo}}</div>
 												<div class="col-6 text-right">
 													<i class="fas fa-award text-gray-700 text-xs" ></i>
 													<span class="badge text-gray-700 text-xs">{{sistema.stakeholder}}</span>
@@ -65,7 +65,7 @@
 											</div>
                                         </div>
                                         <div class="col-12text-xs mx-auto font-weight-bold  mt-2">
-												<a class="btn btn-sm btn-outline-dark" href="{{sistema.endereco}}" >Acessar Sistema</a>
+												<a class="btn btn-sm btn-outline-dark" style="border-radius: 50px;" href="{{sistema.endereco}}" >Mais Detalhes</a>
 										</div>
                                     </div>
                                 </div>
@@ -267,12 +267,12 @@
 				<div class="row">
 					<div class="card shadow mb-4 border-left-warning col-lg-12 col-md-12 col-sm-12 ">
 						<div class="card-header py-3">
-							<h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
+							<h5 class="m-0 font-weight-bold text-dark align-middle">Fale Conosco</h5>
 						</div>
 						<div class="card-body">
-							The styling for this basic card example is created by using default Bootstrap
-							utility classes. By using utility classes, the style of the card component can be
-							easily modified with no need for any custom CSS!
+							<p class="row no-glutters"><span class="col-12 font-weight-bold">{{cas.chave}} : </span><span class="col-12 text-xs"><i class="fas fa-phone"></i>  {{cas.valor}}</span></p>
+							<p class="row no-glutters"><span class="col-12 font-weight-bold">{{email.chave}} :</span><span class="col-12 text-xs"><i class="fas fa-envelope"></i>  {{email.valor}}</span></p>
+							<p class="row no-glutters"><span class="col-12 font-weight-bold">{{portal.chave}} :</span><span class="col-12 text-xs"><a href="{{portal.valor}}">{{portal.valor}}</a></span></p>
 						</div>
 					</div>
 					<div class="card shadow mb-4 border-left-warning col-lg-12 col-md-12 col-sm-12">
